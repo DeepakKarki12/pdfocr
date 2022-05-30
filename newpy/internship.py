@@ -39,8 +39,7 @@ choice = st.sidebar.selectbox("Menu",menu)
 
 if choice == "PDF File":
     st.title("PDF File")
-    if st.button("for simple pdf"):
-        docx_file = st.file_uploader("Upload Document", type=["pdf"])
+    docx_file = st.file_uploader("Upload Document", type=["pdf"])
         if docx_file is not None:
             interface = "File has been uploaded"
             st.subheader(interface)
@@ -77,6 +76,7 @@ if choice == "PDF File":
                     # st.write("If you last converted audio file were more than 1 hour than please wait for 10 minute")
                     st.write(len(total_text))
 
+        
 if choice == "Scanned PDF":
     st.title('Scanned PDF')
     docx_file = st.file_uploader("Upload Document", type=["pdf"])
